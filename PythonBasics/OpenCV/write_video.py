@@ -41,16 +41,16 @@ out = cv2.VideoWriter('my_cam.avi',
      25, 
     (frame_width,frame_height), isColor=1)
 
-i = 0
-while (cap.isOpened()):
-# while (True):
+i = 0 
+while (cap.isOpened()  ):
     ret, frame = cap.read()
 
     if ret == True:
       i = i + 1
       cv2.imshow('Frame', frame)
       # write the images to video file
-      #out.write(frame)
+      out.write(frame)
+      
       
       
       if cv2.waitKey(1) & 0xFF == ord('q'):
